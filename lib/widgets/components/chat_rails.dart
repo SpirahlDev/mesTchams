@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mes_tchams/controllers/global_state_manager.dart';
+import 'package:mes_tchams/models/Contact.dart';
 import 'package:mes_tchams/utils/app_colors.dart';
 import 'package:mes_tchams/utils/functions.dart';
 import 'package:mes_tchams/widgets/windows/chat_room.dart';
@@ -60,6 +61,9 @@ class ChatRailTile extends StatelessWidget {
     //deal with dynamic raduis
     BorderRadiusGeometry? dynamicRaduis;
 
+    /**
+     * Specifying raduis for the extrem list item
+     */
     if(postion==0){
       dynamicRaduis=const BorderRadius.only(topLeft: Radius.circular(raduisValue),topRight: Radius.circular(raduisValue));
     }else if(postion==GlobalStateManager.messages.length-1){

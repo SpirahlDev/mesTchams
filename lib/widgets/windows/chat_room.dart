@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:mes_tchams/controllers/global_state_manager.dart';
+import 'package:mes_tchams/models/Contact.dart';
 import 'package:mes_tchams/utils/app_colors.dart';
 import 'package:mes_tchams/utils/functions.dart';
 import 'package:mes_tchams/widgets/components/chat_rail_column.dart';
@@ -46,7 +46,8 @@ class _ChatRoom extends State<ChatRoom>{
               mainAxisSize: MainAxisSize.max,
               children: [
                 ChatRailColumn(),
-                Expanded(child: Text("Etendu"))
+                // Text("fuck"),
+                // Expanded(child: Text("Etendu"))
               ],
             );
           }

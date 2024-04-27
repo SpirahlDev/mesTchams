@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mes_tchams/controllers/global_state_manager.dart';
+import 'package:mes_tchams/models/Contact.dart';
 
 class ChatScreen extends StatelessWidget{
 

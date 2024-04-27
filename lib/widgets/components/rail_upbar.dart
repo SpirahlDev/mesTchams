@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mes_tchams/controllers/global_state_manager.dart';
+import 'package:mes_tchams/models/Contact.dart';
 import 'package:mes_tchams/utils/app_colors.dart';
 import 'package:mes_tchams/utils/functions.dart';
 import 'package:diacritic/diacritic.dart';
@@ -60,7 +61,7 @@ class _RailUpBarState extends State<RailUpBar> {
               const SizedBox(
                 height: 10,
               ),
-              const TabBar(
+              isMobileScreenContext(context)?const TabBar(
                 tabs: [
                   Tab(
                     icon: Icon(
@@ -91,7 +92,8 @@ class _RailUpBarState extends State<RailUpBar> {
                     height: 30,
                   ),
                 ]
-              ),
+              ):const SizedBox(),
+              const SizedBox(height: 5),
               AnimatedContainer(
                 duration: const Duration(milliseconds: 300), 
                 curve: Curves.easeInOut,
