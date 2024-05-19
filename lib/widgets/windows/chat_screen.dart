@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mes_tchams/models/Contact.dart';
-
 class ChatScreen extends StatelessWidget{
 
   final Contact contact;
@@ -33,6 +32,7 @@ class ChatScreen extends StatelessWidget{
 }
 
 class ChatScreenUpBar extends StatelessWidget {
+  
   const ChatScreenUpBar({
     super.key,
     required this.heroTag,

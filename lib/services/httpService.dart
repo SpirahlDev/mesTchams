@@ -4,12 +4,12 @@ import 'package:http/http.dart' as http;
 class HttpService {
   final String baseUrl;
 
-  HttpService({required this.baseUrl});
+  HttpService({this.baseUrl = "http://localhost/"});
 
-  Future<dynamic> getRequest(String endpoint) async {
+  Future<Map<String, dynamic>> getRequest(String endpoint) async {
     try {
       final response = await http.get(Uri.parse('$baseUrl/$endpoint'));
-      
+
       if (response.statusCode == 200) {
         return json.decode(response.body);
       } else {
